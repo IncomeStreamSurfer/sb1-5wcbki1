@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const guides = [
+  { title: "Suit Essentials", url: "/guides/suit-essentials" },
+  { title: "Fabric Fundamentals", url: "/guides/fabric-fundamentals" },
+  { title: "Accessorizing 101", url: "/guides/accessorizing-101" },
+  { title: "Suit Styles", url: "/guides/suit-styles" },
+  { title: "Dress Shirt Guide", url: "/guides/dress-shirt-guide" },
+  { title: "Necktie Mastery", url: "/guides/necktie-mastery" },
+  { title: "Shoe Essentials", url: "/guides/shoe-essentials" },
+  { title: "Color Theory in Menswear", url: "/guides/color-theory-menswear" },
+  { title: "Grooming Essentials", url: "/guides/grooming-essentials" },
+  { title: "Wardrobe Organization", url: "/guides/wardrobe-organization" },
+  { title: "Business Casual Mastery", url: "/guides/business-casual-mastery" },
+  { title: "Formal Wear Etiquette", url: "/guides/formal-wear-etiquette" },
+];
+---
+
+<Layout title="Style Guides - Classic Menswear Chronicle">
+  <div class="max-w-4xl mx-auto py-8">
+    <h1 class="text-4xl font-bold mb-6">Classic Menswear Style Guides</h1>
+    <p class="text-xl mb-8">Explore our comprehensive collection of style guides to master every aspect of classic menswear.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {guides.map((guide) => (
+        <a href={guide.url} class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <h2 class="text-xl font-semibold mb-2">{guide.title}</h2>
+          <p class="text-gray-600">Learn more →</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>
